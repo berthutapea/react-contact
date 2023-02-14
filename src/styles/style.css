@@ -17,23 +17,39 @@ img {
     max-width: 800px;
     margin: 0 auto;
     padding: 16px;
-
 }
 
-.contact-app h1 {
+.contact-app__header {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.contact-app__header h1 {
     font-weight: normal;
-    font-size: 48px;
-    margin-bottom: 32px;
+    font-size: 32px;
+    flex: 1;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding: 16px;
+}
+
+.navigation ul li a {
+    font-size: 28px;
+    color: black;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     margin: 24px 0;
-    border: 1px dashed black;
+    border: 2px dashed black;
     padding: 16px;
     border-radius: 8px;
 }
+
 
 .contact-item__image img {
     width: 64px;
@@ -57,16 +73,16 @@ img {
 
 .contact-item__delete {
     padding: 8px;
-    font-size: 18px;
-    background-color: orangered;
-    color: white;
+    font-size: 28px;
+    color: red;
+    background-color: transparent;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .contact-input {
-    border: 1px dashed black;
+    border: 2px dashed black;
     padding: 16px;
     margin: 14px 0;
     border-radius: 8px;
@@ -85,4 +101,15 @@ img {
     width: 100%;
     padding: 8px;
     font-family: 'Inter', sans-serif;
+}
+
+.search-bar {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 12px;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    border: 2px dashed black;
+    border-radius: 4px;
 }
