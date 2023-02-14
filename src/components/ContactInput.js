@@ -24,13 +24,13 @@ class ContactInput extends React.Component {
     //     });
     // }
 
-    onTagChangeEventHandler(event) {
-        this.setState(() => {
-            return {
-                tag: event.target.value,
-            }
-        });
-    }
+    // onTagChangeEventHandler(event) {
+    //     this.setState(() => {
+    //         return {
+    //             tag: event.target.value,
+    //         }
+    //     });
+    // }
 
     onSubmitEventHandler(event) {
         event.preventDefault();
