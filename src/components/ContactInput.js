@@ -16,13 +16,13 @@ class ContactInput extends React.Component {
         this.onSubmitEventHandler = this.onSubmitEventHandler.bind(this);
     }
 
-    // onNameChangeEventHandler(event) {
-    //     this.setState(() => {
-    //         return {
-    //             name: event.target.value,
-    //         }
-    //     });
-    // }
+    onNameChangeEventHandler(event) {
+        this.setState(() => {
+            return {
+                name: event.target.value,
+            }
+        });
+    }
 
     // onTagChangeEventHandler(event) {
     //     this.setState(() => {
