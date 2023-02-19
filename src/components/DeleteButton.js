@@ -7,7 +7,7 @@ function DeleteButton({ id, onDelete }) {
 }
 
 DeleteButton.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     onDelete: PropTypes.func.isRequired,
 }
 
