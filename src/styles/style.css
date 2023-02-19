@@ -31,6 +31,11 @@ img {
     flex: 1;
 }
 
+.navigation ul {
+    display: flex;
+    align-items: center;
+}
+
 .navigation ul li {
     display: inline-block;
     padding: 16px;
@@ -41,6 +46,17 @@ img {
     color: black;
 }
 
+.navigation ul li button {
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .contact-item {
     display: flex;
     align-items: center;
@@ -49,7 +65,6 @@ img {
     padding: 16px;
     border-radius: 8px;
 }
-
 
 .contact-item__image img {
     width: 64px;
@@ -81,28 +96,6 @@ img {
     cursor: pointer;
 }
 
-.contact-input {
-    border: 2px dashed black;
-    padding: 16px;
-    margin: 14px 0;
-    border-radius: 8px;
-    margin-bottom: 32px;
-}
-
-.contact-input input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    font-family: 'Inter', sans-serif;
-}
-
-.contact-input button {
-    width: 100%;
-    padding: 8px;
-    font-family: 'Inter', sans-serif;
-}
-
 .search-bar {
     display: block;
     width: 100%;
@@ -112,4 +105,41 @@ img {
     font-family: 'Inter', sans-serif;
     border: 2px dashed black;
     border-radius: 4px;
+}
+
+.login-page h2,
+.register-page h2 {
+    font-weight: normal;
+}
+
+.login-input,
+.register-input,
+.contact-input {
+    margin-top: 16px;
+}
+
+.login-input input,
+.register-input input,
+.contact-input input {
+    display: block;
+    padding: 16px;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px dashed black;
+    border-radius: 8px;
+}
+
+.login-input button,
+.register-input button,
+.contact-input button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 24px;
+    background-color: tan;
+    border: 2px dashed black;
+    border-radius: 8px;
+    margin: 16px 0;
 }
