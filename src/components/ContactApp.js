@@ -14,9 +14,21 @@ class ContactApp extends React.Component {
 
         this.state = {
             authedUser: null,
+            initializing: true,
         };
 
         this.onLoginSuccess = this.onLoginSuccess.bind(this);
+    }
+
+    async componentDidMount() {
+        const { data } = await getUserLogged();
+
+        this.setState(() => {
+            return {
+                authedUser: data,
+                initializing: false
+            };
+        });
     }
 
     async onLoginSuccess({ accessToken }) {
@@ -31,6 +43,9 @@ class ContactApp extends React.Component {
     }
 
     render() {
+        if (this.state.initializing) {
+            return null;
+        }
 
         if (this.state.authedUser === null) {
             return (
