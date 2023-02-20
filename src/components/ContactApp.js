@@ -17,16 +17,18 @@ class ContactApp extends React.Component {
             authedUser: null,
             initializing: true,
             localeContext: {
-                locale: 'id',
+                locale: localStorage.getItem('locale') || 'id',
                 toggleLocale: () => {
                     this.setState((prevState) => {
+                        const newLocale = prevState.localeContext.locale === 'id' ? 'en' : 'id';
+                        localStorage.setItem('locale', newLocale);
                         return {
                             localeContext: {
                                 ...prevState.localeContext,
-                                locale: prevState.localeContext.locale === 'id' ? 'en' : 'id'
+                                locale: newLocale
                             }
                         }
-                    })
+                    });
                 }
             }
         };
@@ -77,7 +79,8 @@ class ContactApp extends React.Component {
                 <LocaleProvider value={this.state.localeContext}>
                     <div className='contact-app'>
                         <header className='contact-app__header'>
-                            <h1>Aplikasi Kontak</h1>
+                            <h1>{this.state.localeContext.locale === 'id' ? 'Aplikasi Kontak' : 'Contacts App'}</h1>
+                            <Navigation logout={this.onLogout} name={this.state.authedUser.name} />
                         </header>
                         <main>
                             <Routes>
