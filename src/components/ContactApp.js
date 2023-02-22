@@ -91,22 +91,22 @@ class ContactApp extends React.Component {
             )
         }
 
-        // return (
-        //     <LocaleProvider value={this.state.localeContext}>
-        //         <div className="contact-app">
-        //             <header className='contact-app__header'>
-        //                 <h1>{this.state.localeContext.locale === 'id' ? 'Aplikasi Kontak' : 'Contacts App'}</h1>
-        //                 <Navigation logout={this.onLogout} name={this.state.authedUser.name} />
-        //             </header>
-        //             <main>
-        //                 <Routes>
-        //                     <Route path="/" element={<HomePage />} />
-        //                     <Route path="/add" element={<AddPage />} />
-        //                 </Routes>
-        //             </main>
-        //         </div>
-        //     </LocaleProvider>
-        // );
+        return (
+            <LocaleProvider value={this.state.localeContext}>
+                <div className="contact-app">
+                    <header className='contact-app__header'>
+                        <h1>{this.state.localeContext.locale === 'id' ? 'Aplikasi Kontak' : 'Contacts App'}</h1>
+                        <Navigation logout={this.onLogout} name={this.state.authedUser.name} />
+                    </header>
+                    <main>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/add" element={<AddPage />} />
+                        </Routes>
+                    </main>
+                </div>
+            </LocaleProvider>
+        );
     }
 }
 
