@@ -5,10 +5,10 @@ class LoginInput extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     email: '',
-        //     password: '',
-        // };
+        this.state = {
+            email: '',
+            password: '',
+        };
 
         this.onEmailChangeHandler = this.onEmailChangeHandler.bind(this);
         this.onPasswordChangeHandler = this.onPasswordChangeHandler.bind(this);
