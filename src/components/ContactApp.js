@@ -73,23 +73,23 @@ class ContactApp extends React.Component {
             return null;
         }
 
-        if (this.state.authedUser === null) {
-            return (
-                <LocaleProvider value={this.state.localeContext}>
-                    <div className='contact-app'>
-                        <header className='contact-app__header'>
-                            <h1>Aplikasi Kontak</h1>
-                        </header>
-                        <main>
-                            <Routes>
-                                <Route path="/*" element={<LoginPage loginSuccess={this.onLoginSuccess} />} />
-                                <Route path="/register" element={<RegisterPage />} />
-                            </Routes>
-                        </main>
-                    </div>
-                </LocaleProvider>
-            )
-        }
+        // if (this.state.authedUser === null) {
+        //     return (
+        //         <LocaleProvider value={this.state.localeContext}>
+        //             <div className='contact-app'>
+        //                 <header className='contact-app__header'>
+        //                     <h1>Aplikasi Kontak</h1>
+        //                 </header>
+        //                 <main>
+        //                     <Routes>
+        //                         <Route path="/*" element={<LoginPage loginSuccess={this.onLoginSuccess} />} />
+        //                         <Route path="/register" element={<RegisterPage />} />
+        //                     </Routes>
+        //                 </main>
+        //             </div>
+        //         </LocaleProvider>
+        //     )
+        // }
 
         return (
             <LocaleProvider value={this.state.localeContext}>
