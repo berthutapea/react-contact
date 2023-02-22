@@ -5,11 +5,11 @@ class RegisterInput extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            name: '',
-            email: '',
-            password: '',
-        }
+        // this.state = {
+        //     name: '',
+        //     email: '',
+        //     password: '',
+        // }
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
