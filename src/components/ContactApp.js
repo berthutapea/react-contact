@@ -66,7 +66,7 @@ class ContactApp extends React.Component {
         });
 
         putAccessToken('');
-    }
+    };
 
     render() {
         if (this.state.initializing) {
